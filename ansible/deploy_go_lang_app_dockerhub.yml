@@ -1,0 +1,13 @@
+---
+- name: Deploy Go lang app
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Run ansible playbook for Install docker core
+      include_tasks: install_docker.yml
+
+    - name: Pull image
+      command: docker pull cotelette/go-lang-app:latest 
+
+    - name: Run docker container
+      command: docker run -p 8000:3000 -dit go-lang-app app:latest
