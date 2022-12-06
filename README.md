@@ -1,4 +1,5 @@
-# Task
+# Tasks
+
 ### [Рефактор докерфайла](Dockerfile)
 ### Внесенные изменения:
 ###### Изменена версия родительского образа на конкретную, чтобы в будущем не было ошибок зависимостей или уязвимостей
@@ -26,3 +27,9 @@
 ###### sudo ansible-playbook ansible/deploy_go_lang_app.yml
 ###### ИЛИ
 ###### sudo ansible-playbook ansible/deploy_go_lang_app_dockerhub.yml
+
+### Деплой с помощью Helm chart
+
+### Деплой с помощью Jenkinsfile
+###### Используя плагин Docker Pipline: 
+###### Используя Bash:
