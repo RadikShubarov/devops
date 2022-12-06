@@ -1,0 +1,36 @@
+---
+- name: Deploy Go lang app
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Run ansible playbook for Install docker core
+      include_tasks: install_docker.yml
+
+    - name: Create app workdir
+      ansible.builtin.file:
+        path: /home/app
+        state: directory
+        mode: '0750'
+
+    - name: Clone repo from github
+      ansible.builtin.git:
+        repo: https://code.dev.gazprom-neft.ru:443/gpn-cup-2022/test-task.git
+        dest: /home/app
+        single_branch: yes
+        version: master
+
+
+  # Had my path to local Dockerfile, I know how replace it by content args in copy module 
+    - name: Replace Dockerfile
+      copy:
+        src: "/home/radik/gazprom/my-build/Dockerfile"
+        dest: "/home/app/Dockerfile"
+        force: yes
+
+    - name: Build image from dockerfile
+      command: docker build -t go-lang-app:latest .
+      args:
+        chdir: /home/app/
+
+    - name: Run docker container
+      command: docker run -p 8000:3000 -dit go-lang-app app:latest
