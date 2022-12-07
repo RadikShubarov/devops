@@ -33,5 +33,5 @@
 ###### helm install app chart/ --set replicaCount=2
 
 ### Деплой с помощью Jenkinsfile
-###### Используя плагин Docker Pipline: 
-###### Используя Bash:
+###### Используя плагин Docker Pipline: [Jenkinsfile](./jenkins/Jenkinsfile)
+###### Используя Bash: [Jenkinsfile1](./jenkins/Jenkinsfile1)
