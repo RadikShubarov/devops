@@ -15,7 +15,7 @@
 ###### docker pull cotelette/go-lang-app:latest
 
 ### Run container command:
-###### docker run -p 8000:3000 -d go-lang-app app:latest
+###### docker run -p 8000:3000 --rm -dit go-lang-app:latest
 
 
 ### [Деплой с помощью Ansible playbooks](./ansible)
