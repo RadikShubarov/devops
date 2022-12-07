@@ -10,4 +10,4 @@
       command: docker pull cotelette/go-lang-app:latest 
 
     - name: Run docker container
-      command: docker run -p 8000:3000 -dit go-lang-app app:latest
+      command: docker run -p 8000:3000 --rm -dit cotelette/go-lang-app:latest
