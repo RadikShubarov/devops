@@ -1,0 +1,5 @@
+container:
+  image: cotelette/go-lang-app:latest
+
+replicaCount: 2
+
