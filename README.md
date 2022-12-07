@@ -18,6 +18,7 @@
 ### Команда запуска конейнера:
 ###### docker run -p 8000:3000 --rm -dit go-lang-app:latest
 
+# Ansible
 
 ### [Деплой с помощью Ansible playbooks](./ansible)
 ###### Каталог содержит три плейюбука:
@@ -29,10 +30,12 @@
 ###### ИЛИ
 ###### sudo ansible-playbook ansible/deploy_go_lang_app_dockerhub.yml
 
+# Helm chart
 ### [Деплой с помощью Helm chart](./chart)
 ### Helm deploy command
 ###### helm install app chart/ --set replicaCount=2
 
+# Jenkins
 ### [Деплой с помощью Jenkinsfile](./jenkins)
 ###### Используя плагин Docker Pipline: [Jenkinsfile](./jenkins/Jenkinsfile)
 ###### Используя Bash и данный репозиторий: [Jenkinsfile1](./jenkins/Jenkinsfile1)
