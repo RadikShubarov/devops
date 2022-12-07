@@ -18,12 +18,13 @@
         dest: /home/app
         single_branch: yes
         version: master
+        force: true
 
 
   # Had my path to local Dockerfile, I know how replace it by content args in copy module 
     - name: Replace Dockerfile
       copy:
-        src: "/home/radik/gazprom/my-build/Dockerfile"
+        src: "../Dockerfile"
         dest: "/home/app/Dockerfile"
         force: yes
 
