@@ -4,12 +4,8 @@ properties([disableConcurrentBuilds()])
 
 pipeline {
     agent {
-        label: main
-        }
-    options {
-        timestamps()
-        }
-        
+        label 'main'
+        }     
     stages {
         stage('Pull and run docker image') {
             steps {
