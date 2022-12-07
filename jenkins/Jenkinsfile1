@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages {
+        stage('Pull and run docker image') {
+            steps {
+                dir ('/home/radik/gazprom/my-build') {
+                    sh 'docker build -t go-lang-app:latest .'
+                    sh 'docker run -p 8000:3000 -d go-lang-app app'
+                }
+            }
+        }
+    }
+}
