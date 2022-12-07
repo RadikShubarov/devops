@@ -25,7 +25,7 @@
 ###### [install_docker.yml](./ansible/install_docker.yml) Устанавливает докер на ОС, включен в два следующих скрипта
 ###### [deploy_go_lang_app.yml](./ansible/deploy_go_lang_app.yml) Меняет докерфайл клонируемого репозитория с заданием на докерфайл с моего репозитория и запускает контейнер.
 ###### [deploy_go_lang_app_dockerhub.yml](./ansible/deploy_go_lang_app_dockerhub.yml) Альтернативный плейбук, скачивает мой готовый образ с реестра докерхаб.
-### RUN playbook
+### Команда запуска плейбуков
 ###### sudo ansible-playbook ansible/deploy_go_lang_app.yml
 ###### ИЛИ
 ###### sudo ansible-playbook ansible/deploy_go_lang_app_dockerhub.yml
