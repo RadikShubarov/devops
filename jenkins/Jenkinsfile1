@@ -1,12 +1,20 @@
+#!groovy
+
+properties([disableConcurrentBuilds()])
+
 pipeline {
-    agent any
+    agent {
+        label: master
+        }
+    options {
+        timestamps()
+        }
+        
     stages {
         stage('Pull and run docker image') {
             steps {
-                dir ('/home/radik/gazprom/my-build') {
-                    sh 'docker build -t go-lang-app:latest .'
-                    sh 'docker run -p 8000:3000 -d go-lang-app app'
-                }
+                sh 'docker build -t go-lang-app:latest .'
+                sh 'docker run -p 8000:3000 -d go-lang-app app'
             }
         }
     }
