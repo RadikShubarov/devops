@@ -21,7 +21,7 @@ RUN go mod download \
 CMD ['10 15 minutes, 5 10 fifth, 4 5 10 fifth']
 
 FROM alpine:3
-COPY --from=builder /app/server /app/server
+COPY --from=builder /app/ /app/
 
 WORKDIR /app
 
