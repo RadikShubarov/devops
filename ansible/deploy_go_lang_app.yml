@@ -34,4 +34,4 @@
         chdir: /home/app/
 
     - name: Run docker container
-      command: docker run -p 8000:3000 -dit go-lang-app app:latest
+      command: docker run -p 8000:3000 --rm -dit go-lang-app:latest
