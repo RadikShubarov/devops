@@ -34,4 +34,4 @@
 
 ### [Деплой с помощью Jenkinsfile](./jenkins)
 ###### Используя плагин Docker Pipline: [Jenkinsfile](./jenkins/Jenkinsfile)
-###### Используя Bash: [Jenkinsfile1](./jenkins/Jenkinsfile1)
+###### Используя Bash и данный репозиторий: [Jenkinsfile1](./jenkins/Jenkinsfile1)
