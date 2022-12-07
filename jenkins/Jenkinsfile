@@ -4,7 +4,7 @@ pipeline {
         stage ('Pull and run docker image') {
             steps {
                 sh 'docker pull cotelette/go-lang-app:latest'
-                sh 'docker run -p 8000:3000 -d go-lang-app app'
+                sh 'docker run -p 8000:3000 --rm -dit cotelette/go-lang-app:latest'
             }
         }
     }
