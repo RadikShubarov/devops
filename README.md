@@ -28,7 +28,9 @@
 ###### ИЛИ
 ###### sudo ansible-playbook ansible/deploy_go_lang_app_dockerhub.yml
 
-### Деплой с помощью Helm chart
+### Деплой с помощью Helm chart [Файлы](./chart)
+### Helm deploy command
+###### helm install app chart/ --set replicaCount=2
 
 ### Деплой с помощью Jenkinsfile
 ###### Используя плагин Docker Pipline: 
