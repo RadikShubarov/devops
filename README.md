@@ -35,7 +35,7 @@
 ###### sudo ansible-playbook ansible/deploy_go_lang_app_dockerhub.yml
 
 # Helm chart
-### [Деплой с помощью Helm chart](./chart)
+### [Деплой с помощью Helm chart](./helm)
 ### Команда деплоя для Helm:
 ###### helm install app chart/ --set replicaCount=2
 
